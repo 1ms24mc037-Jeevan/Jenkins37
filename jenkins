@@ -1,0 +1,23 @@
+pipeline {
+  agent any
+
+  stages {
+      stage('Checkout'){
+          steps {
+              git branch : 'main', url : 'https://github.com/1ms24mc037-Jeevan/Jenkins37'
+          }
+      }
+
+      stage('Builds'){
+          steps {
+              echo "Building..."
+          }
+      }
+
+      stage('Test') {
+          steps {
+            echo "Testing..."
+          }
+      }
+  }
+}
